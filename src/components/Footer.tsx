@@ -62,12 +62,12 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-orange-400 to-green-400 bg-clip-text text-transparent">
-                SportsPulse
+                Kick it with Fab
               </h2>
               <p className="text-gray-400 mt-2">Your Ultimate Sports Destination</p>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              SportsPulse is your premier source for comprehensive sports coverage, delivering the latest news, 
+              Kick it with Fab is your premier source for comprehensive sports coverage, delivering the latest news, 
               in-depth analysis, and exclusive interviews from the world of athletics. We're passionate about 
               bringing you closer to the games you love.
             </p>
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail size={18} className="text-blue-400" />
-                <span>contact@sportspulse.com</span>
+                <span>contact@kickitwithfab.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone size={18} className="text-blue-400" />
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-6 text-gray-400 text-sm mb-4 md:mb-0">
-              <span>© {currentYear} SportsPulse. All rights reserved.</span>
+              <span>© {currentYear} Kick it with Fab. All rights reserved.</span>
               <div className="hidden md:flex items-center space-x-4">
                 <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
                 <span>•</span>

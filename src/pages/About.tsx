@@ -61,7 +61,7 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            About SportsPulse
+            About Kick it with Fab
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
             Your ultimate destination for comprehensive sports coverage, bringing you closer to the games, 
@@ -97,7 +97,7 @@ const About: React.FC = () => {
               </h2>
               <div className="prose prose-lg text-gray-600">
                 <p className="mb-6 leading-relaxed">
-                  Founded in 2018 by a team of passionate sports enthusiasts, SportsPulse began as a simple blog 
+                  Founded in 2018 by a team of passionate sports enthusiasts, Kick it with Fab began as a simple blog 
                   dedicated to providing authentic, insightful sports coverage. What started as a weekend project 
                   has grown into a trusted source for sports news, reaching thousands of fans worldwide.
                 </p>
@@ -107,7 +107,7 @@ const About: React.FC = () => {
                   that capture the human side of athletics.
                 </p>
                 <p className="leading-relaxed">
-                  Today, SportsPulse continues to evolve, embracing new technologies and platforms while staying 
+                  Today, Kick it with Fab continues to evolve, embracing new technologies and platforms while staying 
                   true to our core mission: connecting fans to the sports they love through exceptional storytelling.
                 </p>
               </div>

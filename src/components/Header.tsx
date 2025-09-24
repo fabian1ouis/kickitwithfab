@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-orange-500 to-green-600 bg-clip-text text-transparent">
-              SportsPulse
+              Kick it with Fab
             </h1>
             <span className="ml-2 text-sm text-gray-500 hidden sm:block">Your Ultimate Sports Destination</span>
           </div>
