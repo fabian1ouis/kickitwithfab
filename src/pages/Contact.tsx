@@ -56,19 +56,19 @@ const Contact: React.FC = () => {
     {
       icon: MessageCircle,
       title: 'Editorial Team',
-      email: 'editorial@sportspulse.com',
+      email: 'editorial@kickitwithfab.com',
       description: 'Story tips, corrections, editorial inquiries'
     },
     {
       icon: Users,
       title: 'Partnerships',
-      email: 'partnerships@sportspulse.com',
+      email: 'partnerships@kickitwithfab.com',
       description: 'Collaboration opportunities, sponsorships'
     },
     {
       icon: Globe,
       title: 'Technical Support',
-      email: 'support@sportspulse.com',
+      email: 'support@kickitwithfab.com',
       description: 'Website issues, account problems'
     }
   ];
