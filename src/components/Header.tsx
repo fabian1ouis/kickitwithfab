@@ -20,7 +20,7 @@ const Header: React.FC = () => {
         {/* Top bar */}
         <div className="flex items-center justify-between py-2 text-sm text-gray-600 border-b border-gray-200">
           <div className="flex items-center space-x-4">
-            <span>📍 Breaking: NBA Finals Game 7 Tonight!</span>
+            <span>📍 Breaking: NFL Playoffs Heat Up as Chiefs Eye Fourth Ring!</span>
           </div>
           <div className="flex items-center space-x-4">
             <span>🌡️ 72°F</span>

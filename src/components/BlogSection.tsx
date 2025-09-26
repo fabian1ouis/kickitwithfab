@@ -62,7 +62,7 @@ const BlogSection: React.FC = () => {
                               alt={post.author.name}
                               className="w-6 h-6 rounded-full"
                             />
-                            <span>{post.author.name}</span>
+                            <span>By {post.author.name}</span>
                           </div>
                           <span>•</span>
                           <span>{formatDate(post.publishedAt)}</span>

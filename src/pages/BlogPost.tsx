@@ -98,8 +98,8 @@ const BlogPost: React.FC = () => {
                   className="w-12 h-12 rounded-full"
                 />
                 <div>
-                  <p className="font-semibold text-gray-900">{post.author.name}</p>
-                  <p className="text-sm text-gray-600">Sports Journalist</p>
+                  <p className="font-semibold text-gray-900">By {post.author.name}</p>
+                  <p className="text-sm text-gray-600">Founder & Editor-in-Chief</p>
                 </div>
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-600">

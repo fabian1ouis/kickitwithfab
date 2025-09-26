@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
                             alt={featuredPost.author.name}
                             className="w-8 h-8 rounded-full"
                           />
-                          <span>{featuredPost.author.name}</span>
+                          <span>By {featuredPost.author.name}</span>
                         </div>
                         <div className="flex items-center space-x-1">
                           <Clock size={16} />
