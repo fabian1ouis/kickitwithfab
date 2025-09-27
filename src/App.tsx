@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Categories from './components/Categories';
-import BlogSection from './components/BlogSection';
-import Footer from './components/Footer';
+import HeroSlider from './components/HeroSlider';
+import AnimatedCategories from './components/AnimatedCategories';
+import AnimatedBlogSection from './components/AnimatedBlogSection';
+import AnimatedFooter from './components/AnimatedFooter';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import BlogPost from './pages/BlogPost';
@@ -14,9 +14,9 @@ import AdminPosts from './pages/AdminPosts';
 
 const HomePage: React.FC = () => (
   <>
-    <Hero />
-    <Categories />
-    <BlogSection />
+    <HeroSlider />
+    <AnimatedCategories />
+    <AnimatedBlogSection />
   </>
 );
 
@@ -43,7 +43,7 @@ function App() {
                   <Route path="/blog" element={<HomePage />} />
                 </Routes>
               </main>
-              <Footer />
+              <AnimatedFooter />
             </div>
           } />
         </Routes>
