@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Mail size={18} className="text-blue-400" />
-                <span>contact@kickitwithfab.com</span>
+                <span>hello@kickitwithfab.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone size={18} className="text-blue-400" />
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin size={18} className="text-blue-400" />
-                <span>New York City, NY</span>
+                <span>Los Angeles, CA</span>
               </div>
             </div>
 

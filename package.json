@@ -1,8 +1,16 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "kickitwithfab-sports-blog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Kick it with Fab - Your Ultimate Sports Destination",
+  "keywords": ["sports", "blog", "news", "NFL", "NBA", "MLB", "soccer", "tennis", "athletics"],
+  "author": "Fabian Louis <contact@kickitwithfab.com>",
+  "homepage": "https://www.kickitwithfab.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kickitwithfab/sports-blog.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

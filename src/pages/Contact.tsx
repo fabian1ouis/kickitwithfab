@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'contact@sportspulse.com',
+      details: 'hello@kickitwithfab.com',
       description: 'General inquiries and feedback'
     },
     {
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Sports Avenue, New York, NY 10001',
+      details: '456 Sports Boulevard, Los Angeles, CA 90210',
       description: 'Our main editorial office'
     },
     {

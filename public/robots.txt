@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.kickitwithfab.com/sitemap.xml
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /api/
+
+# Allow access to important pages
+Allow: /about
+Allow: /contact
+Allow: /blog/
+Allow: /categories/
+
+# Host information
+Host: https://www.kickitwithfab.com

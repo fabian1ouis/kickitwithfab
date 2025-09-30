@@ -35,18 +35,18 @@ const Header: React.FC = () => {
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              📍 Breaking: NFL Playoffs Heat Up as Chiefs Eye Fourth Ring!
+              🔥 LIVE: NFL Conference Championships - Chiefs vs Ravens, Lions vs 49ers!
             </motion.span>
           </div>
           <div className="flex items-center space-x-4">
-            <span>🌡️ 72°F</span>
+            <span>📍 Los Angeles</span>
             <motion.button 
               className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Bell size={16} />
-              <span>Subscribe</span>
+              <span>Alerts</span>
             </motion.button>
           </div>
         </motion.div>

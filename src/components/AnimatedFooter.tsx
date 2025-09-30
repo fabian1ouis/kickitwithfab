@@ -185,9 +185,9 @@ const AnimatedFooter: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               {[
-                { icon: Mail, text: 'contact@kickitwithfab.com' },
+                { icon: Mail, text: 'hello@kickitwithfab.com' },
                 { icon: Phone, text: '+1 (555) 123-4567' },
-                { icon: MapPin, text: 'New York City, NY' }
+                { icon: MapPin, text: 'Los Angeles, CA' }
               ].map((item, index) => (
                 <motion.div
                   key={index}
