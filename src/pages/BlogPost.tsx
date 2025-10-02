@@ -160,15 +160,15 @@ const BlogPost: React.FC = () => {
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-600 font-medium mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 font-medium mb-8 leading-relaxed font-inter">
                 {post.excerpt}
               </p>
               
-              <div className="text-gray-700 leading-relaxed space-y-6">
+              <div className="text-gray-700 leading-relaxed space-y-6 font-inter">
                 {post.content.split('\n\n').map((paragraph, index) => {
                   if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                     return (
-                      <h3 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                      <h3 key={index} className="text-2xl font-bold font-fraunces text-gray-900 mt-8 mb-4">
                         {paragraph.replace(/\*\*/g, '')}
                       </h3>
                     );
@@ -207,7 +207,7 @@ const BlogPost: React.FC = () => {
                 />
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{post.author.name}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{post.author.bio}</p>
+                  <p className="text-gray-600 mb-4 leading-relaxed font-inter">{post.author.bio}</p>
                   <div className="flex space-x-3">
                     {post.author.social.twitter && (
                       <a href={`https://twitter.com/${post.author.social.twitter}`} className="text-blue-500 hover:text-blue-600">
@@ -297,7 +297,7 @@ const BlogPost: React.FC = () => {
                           <h4 className="font-semibold text-sm text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
                             {relatedPost.title}
                           </h4>
-                          <div className="flex items-center space-x-2 mt-2 text-xs text-gray-500">
+                          <div className="flex items-center space-x-2 mt-2 text-xs text-gray-500 font-inter">
                             <Clock size={12} />
                             <span>{relatedPost.readTime} min</span>
                           </div>
@@ -311,7 +311,7 @@ const BlogPost: React.FC = () => {
               {/* Newsletter */}
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 text-white text-center">
                 <h3 className="text-xl font-bold mb-3">Stay Updated</h3>
-                <p className="text-blue-100 text-sm mb-4">Get our latest sports analysis delivered to your inbox</p>
+                <p className="text-blue-100 text-sm mb-4 font-inter">Get our latest sports analysis delivered to your inbox</p>
                 <div className="space-y-3">
                   <input
                     type="email"
@@ -330,7 +330,7 @@ const BlogPost: React.FC = () => {
                 <div className="bg-gray-800 rounded-lg h-48 flex items-center justify-center mb-4">
                   <div className="text-center">
                     <div className="text-4xl mb-2">🏆</div>
-                    <p className="text-sm text-gray-400">Premium Sports Gear</p>
+                    <p className="text-sm text-gray-400 font-inter">Premium Sports Gear</p>
                   </div>
                 </div>
                 <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors">
