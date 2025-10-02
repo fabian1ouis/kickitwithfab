@@ -63,7 +63,7 @@ const About: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             About Kick it with Fab
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed font-inter">
             Your ultimate destination for comprehensive sports coverage, bringing you closer to the games, 
             athletes, and stories that matter most.
           </p>
@@ -95,7 +95,7 @@ const About: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Story
               </h2>
-              <div className="prose prose-lg text-gray-600">
+              <div className="prose prose-lg text-gray-600 font-inter">
                 <p className="mb-6 leading-relaxed">
                   Founded in 2018 by a team of passionate sports enthusiasts, Kick it with Fab began as a simple blog 
                   dedicated to providing authentic, insightful sports coverage. What started as a weekend project 
@@ -133,7 +133,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
               These core principles guide everything we do and shape how we serve our community of sports fans.
             </p>
           </div>
@@ -145,7 +145,7 @@ const About: React.FC = () => {
                   <value.icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 leading-relaxed font-inter">{value.description}</p>
               </div>
             ))}
           </div>
@@ -159,7 +159,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
               Our diverse team of experienced journalists, former athletes, and sports analysts brings unique 
               perspectives to every story we tell.
             </p>
@@ -178,7 +178,7 @@ const About: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+                <p className="text-gray-600 text-sm leading-relaxed font-inter">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -191,7 +191,7 @@ const About: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Join Our Community
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-inter">
             Become part of a passionate community of sports fans. Get exclusive content, 
             participate in discussions, and never miss the latest sports news.
           </p>

@@ -107,13 +107,13 @@ const AnimatedFooter: React.FC = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-4xl font-bold font-fraunces mb-4"
             >
               Stay Ahead of the Game
             </motion.h3>
             <motion.p
               variants={itemVariants}
-              className="text-blue-100 text-lg mb-8"
+              className="text-blue-100 text-lg mb-8 font-inter"
             >
               Get the latest sports news, analysis, and exclusive content delivered straight to your inbox.
             </motion.p>
@@ -161,17 +161,17 @@ const AnimatedFooter: React.FC = () => {
           <motion.div variants={itemVariants} className="lg:col-span-2">
             <div className="mb-6">
               <motion.h2
-                className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-orange-400 to-green-400 bg-clip-text text-transparent"
+                className="text-3xl font-bold font-fraunces bg-gradient-to-r from-blue-400 via-orange-400 to-green-400 bg-clip-text text-transparent"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
                 Kick it with Fab
               </motion.h2>
-              <p className="text-gray-400 mt-2">Your Ultimate Sports Destination</p>
+              <p className="text-gray-400 mt-2 font-inter">Your Ultimate Sports Destination</p>
             </div>
             
             <motion.p
-              className="text-gray-300 mb-6 leading-relaxed"
+              className="text-gray-300 mb-6 leading-relaxed font-inter"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -234,7 +234,7 @@ const AnimatedFooter: React.FC = () => {
           {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
             <motion.div key={category} variants={itemVariants}>
               <motion.h3
-                className="text-lg font-bold text-white mb-6 relative"
+                className="text-lg font-bold font-fraunces text-white mb-6 relative"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.3 }}
               >

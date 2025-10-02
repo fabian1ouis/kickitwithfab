@@ -108,7 +108,7 @@ const AnimatedBlogSection: React.FC = () => {
           className="text-center mb-16"
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold font-fraunces text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -117,7 +117,7 @@ const AnimatedBlogSection: React.FC = () => {
             Latest Sports News
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8"
+            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-inter"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -284,7 +284,7 @@ const AnimatedBlogSection: React.FC = () => {
 
                     {/* Title */}
                     <motion.h3
-                      className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight line-clamp-2"
+                      className="text-xl font-bold font-fraunces text-gray-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight line-clamp-2"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 }}
@@ -294,7 +294,7 @@ const AnimatedBlogSection: React.FC = () => {
 
                     {/* Excerpt */}
                     <motion.p
-                      className="text-gray-600 mb-4 leading-relaxed line-clamp-3"
+                      className="text-gray-600 mb-4 leading-relaxed line-clamp-3 font-inter"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2 }}

@@ -61,13 +61,13 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <motion.h1 
-              className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-orange-500 to-green-600 bg-clip-text text-transparent"
+              className="text-3xl font-bold font-fraunces bg-gradient-to-r from-blue-600 via-orange-500 to-green-600 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
               Kick it with Fab
             </motion.h1>
-            <span className="ml-2 text-sm text-gray-500 hidden sm:block">Your Ultimate Sports Destination</span>
+            <span className="ml-2 text-sm text-gray-500 hidden sm:block font-inter">Your Ultimate Sports Destination</span>
           </div>
 
           {/* Desktop Navigation */}

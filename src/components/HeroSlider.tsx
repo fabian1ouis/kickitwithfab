@@ -95,7 +95,7 @@ const HeroSlider: React.FC = () => {
                       {/* Title */}
                       <motion.h1
                         variants={textVariants}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold font-fraunces text-white leading-tight"
                       >
                         {post.title}
                       </motion.h1>
@@ -103,7 +103,7 @@ const HeroSlider: React.FC = () => {
                       {/* Excerpt */}
                       <motion.p
                         variants={textVariants}
-                        className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl"
+                        className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-3xl font-inter"
                       >
                         {post.excerpt}
                       </motion.p>

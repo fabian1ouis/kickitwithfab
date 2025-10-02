@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed font-inter">
             Have a story tip? Questions about our coverage? Want to collaborate? 
             We'd love to hear from you!
           </p>
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Send us a Message
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600 font-inter">
                   Fill out the form below and we'll get back to you as soon as possible. 
                   All fields marked with * are required.
                 </p>
@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-6">
                   Frequently Asked Questions
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 font-inter">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">How quickly do you respond?</h4>
                     <p className="text-gray-600 text-sm">We typically respond to all inquiries within 24 hours during business days.</p>
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
               {/* Social Media CTA */}
               <div className="bg-gray-900 text-white rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold mb-4">Follow Our Social Media</h3>
-                <p className="text-gray-300 mb-6 text-sm">
+                <p className="text-gray-300 mb-6 text-sm font-inter">
                   Stay connected with us on social media for real-time updates and behind-the-scenes content.
                 </p>
                 <div className="flex justify-center space-x-4">
