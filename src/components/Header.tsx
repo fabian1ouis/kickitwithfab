@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Menu, X, Bell, Moon, Sun, ChevronDown, Home, Grid3X3, FileText, User, Phone, Shield } from 'lucide-react';
+import { Search, Menu, X, Bell, Moon, Sun, ChevronDown, Home, Grid3x3 as Grid3X3, FileText, User, Phone, Shield } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Header: React.FC = () => {
