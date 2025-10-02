@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { categories } from '../data/mockData';
 import { ArrowRight, TrendingUp } from 'lucide-react';
+import MotionWrapper from './MotionWrapper';
+import MorphingButton from './MorphingButton';
 
 const AnimatedCategories: React.FC = () => {
   const categoryIcons = {
@@ -65,13 +67,7 @@ const AnimatedCategories: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <MotionWrapper animation="fadeUp" className="text-center mb-16">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold font-fraunces text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +86,7 @@ const AnimatedCategories: React.FC = () => {
           >
             Dive deep into your favorite sports with comprehensive coverage, expert analysis, and breaking news.
           </motion.p>
-        </motion.div>
+        </MotionWrapper>
 
         <motion.div
           variants={containerVariants}
@@ -192,13 +188,9 @@ const AnimatedCategories: React.FC = () => {
                     </motion.p>
                     
                     <div className="flex items-center justify-between">
-                      <motion.button 
-                        className="bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-semibold hover:bg-white/30 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
+                      <MorphingButton size="sm" className="bg-white/20 backdrop-blur-sm text-white border-0">
                         View Articles
-                      </motion.button>
+                      </MorphingButton>
                       <div className="flex items-center space-x-1 text-sm opacity-75">
                         <TrendingUp size={14} />
                         <span>12+ Articles</span>
@@ -220,25 +212,11 @@ const AnimatedCategories: React.FC = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <motion.button 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-          >
+        <MotionWrapper animation="scale" delay={0.5} className="text-center mt-16">
+          <MorphingButton variant="primary" size="lg">
             View All Categories
-          </motion.button>
-        </motion.div>
+          </MorphingButton>
+        </MotionWrapper>
       </div>
     </section>
   );

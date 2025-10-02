@@ -4,6 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Clock, Eye, MessageCircle, Share2, ArrowRight, Heart, Bookmark } from 'lucide-react';
 import { blogPosts } from '../data/mockData';
+import MotionWrapper from './MotionWrapper';
+import MorphingButton from './MorphingButton';
+import LoadingSpinner from './LoadingSpinner';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,6 +16,7 @@ const AnimatedBlogSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [likedPosts, setLikedPosts] = useState<Set<string>>(new Set());
   const [bookmarkedPosts, setBookmarkedPosts] = useState<Set<string>>(new Set());
+  const [isLoading, setIsLoading] = useState(false);
 
   const recentPosts = blogPosts.slice(0, 8);
   const categories = ['All', 'Football', 'Basketball', 'Athletics', 'Soccer', 'Tennis'];
@@ -52,6 +56,14 @@ const AnimatedBlogSection: React.FC = () => {
       }
       return newSet;
     });
+  };
+
+  const handleFilterChange = (category: string) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setActiveFilter(category);
+      setIsLoading(false);
+    }, 300);
   };
 
   const containerVariants = {
@@ -100,13 +112,7 @@ const AnimatedBlogSection: React.FC = () => {
     <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <MotionWrapper animation="fadeUp" className="text-center mb-16">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold font-fraunces text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -127,17 +133,11 @@ const AnimatedBlogSection: React.FC = () => {
           </motion.p>
 
           {/* Category Filter */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-3"
-          >
+          <MotionWrapper animation="fadeUp" delay={0.6} className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <motion.button
                 key={category}
-                onClick={() => setActiveFilter(category)}
+                onClick={() => handleFilterChange(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   activeFilter === category
                     ? 'bg-blue-600 text-white shadow-lg'
@@ -150,17 +150,24 @@ const AnimatedBlogSection: React.FC = () => {
                 {category}
               </motion.button>
             ))}
-          </motion.div>
-        </motion.div>
+          </MotionWrapper>
+        </MotionWrapper>
 
+        {/* Loading State */}
+        <AnimatePresence>
+          {isLoading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex justify-center py-12"
+            >
+              <LoadingSpinner size="lg" />
+            </motion.div>
+          )}
+        </AnimatePresence>
         {/* Featured Post Slider */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-16"
-        >
+        <MotionWrapper animation="fadeUp" delay={0.3} className="mb-16">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -327,14 +334,10 @@ const AnimatedBlogSection: React.FC = () => {
                         >
                           <Share2 size={16} />
                         </motion.button>
-                        <motion.button
-                          className="flex items-center space-x-2 text-blue-600 font-semibold hover:bg-blue-50 px-4 py-2 rounded-full transition-colors group"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
+                        <MorphingButton size="sm" variant="primary" className="flex items-center space-x-2 group">
                           <span>Read More</span>
                           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                        </motion.button>
+                        </MorphingButton>
                       </div>
                     </div>
                   </div>
@@ -353,28 +356,14 @@ const AnimatedBlogSection: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
-        </motion.div>
+        </MotionWrapper>
 
         {/* Load More Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center"
-        >
-          <motion.button
-            className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-          >
+        <MotionWrapper animation="scale" delay={0.5} className="text-center">
+          <MorphingButton variant="primary" size="lg">
             Load More Articles
-          </motion.button>
-        </motion.div>
+          </MorphingButton>
+        </MotionWrapper>
       </div>
 
       <style jsx>{`

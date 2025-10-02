@@ -60,7 +60,7 @@ const AnimatedFooter: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white overflow-hidden">
+    <footer className="bg-gray-900 dark:bg-black text-white overflow-hidden transition-colors duration-300">
       {/* Newsletter Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}

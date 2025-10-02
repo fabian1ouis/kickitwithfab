@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import BlogPost from './pages/BlogPost';
 import Admin from './pages/Admin';
 import AdminPosts from './pages/AdminPosts';
+import FloatingActionButton from './components/FloatingActionButton';
 
 const HomePage: React.FC = () => (
   <>
@@ -44,6 +45,7 @@ function App() {
                 </Routes>
               </main>
               <AnimatedFooter />
+              <FloatingActionButton />
             </div>
           } />
         </Routes>

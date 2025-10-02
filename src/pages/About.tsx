@@ -1,5 +1,8 @@
 import React from 'react';
 import { Users, Award, Clock, Target, Heart, Globe } from 'lucide-react';
+import MotionWrapper from '../components/MotionWrapper';
+import AnimatedCounter from '../components/AnimatedCounter';
+import MorphingButton from '../components/MorphingButton';
 
 const About: React.FC = () => {
   const stats = [
@@ -73,17 +76,24 @@ const About: React.FC = () => {
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <MotionWrapper animation="fadeUp">
+            <div className="grid md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
+              <MotionWrapper key={index} animation="scale" delay={index * 0.2} className="text-center group">
                 <div className="w-20 h-20 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors">
                   <stat.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-gray-900 mb-2">
+                  <AnimatedCounter 
+                    end={parseInt(stat.value.replace(/[^\d]/g, '')) || 50} 
+                    suffix={stat.value.includes('K') ? 'K+' : stat.value.includes('/') ? '/7' : '+'}
+                  />
+                </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
+              </MotionWrapper>
             ))}
-          </div>
+            </div>
+          </MotionWrapper>
         </div>
       </section>
 
@@ -91,7 +101,7 @@ const About: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <MotionWrapper animation="fadeLeft">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Story
               </h2>
@@ -111,8 +121,8 @@ const About: React.FC = () => {
                   true to our core mission: connecting fans to the sports they love through exceptional storytelling.
                 </p>
               </div>
-            </div>
-            <div className="relative">
+            </MotionWrapper>
+            <MotionWrapper animation="fadeRight" className="relative">
               <div className="relative z-10">
                 <img
                   src="https://images.pexels.com/photos/159740/library-la-trobe-study-students-159740.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -121,7 +131,7 @@ const About: React.FC = () => {
                 />
               </div>
               <div className="absolute top-8 left-8 w-full h-full bg-blue-600 rounded-2xl -z-10"></div>
-            </div>
+            </MotionWrapper>
           </div>
         </div>
       </section>
@@ -129,24 +139,24 @@ const About: React.FC = () => {
       {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <MotionWrapper animation="fadeUp" className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
               These core principles guide everything we do and shape how we serve our community of sports fans.
             </p>
-          </div>
+          </MotionWrapper>
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <MotionWrapper key={index} animation="fadeUp" delay={index * 0.2} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                   <value.icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed font-inter">{value.description}</p>
-              </div>
+              </MotionWrapper>
             ))}
           </div>
         </div>
@@ -155,7 +165,7 @@ const About: React.FC = () => {
       {/* Team Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <MotionWrapper animation="fadeUp" className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Meet Our Team
             </h2>
@@ -163,11 +173,11 @@ const About: React.FC = () => {
               Our diverse team of experienced journalists, former athletes, and sports analysts brings unique 
               perspectives to every story we tell.
             </p>
-          </div>
+          </MotionWrapper>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="group">
+              <MotionWrapper key={index} animation="fadeUp" delay={index * 0.1} className="group">
                 <div className="relative overflow-hidden rounded-2xl mb-6">
                   <img
                     src={member.image}
@@ -179,7 +189,7 @@ const About: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-blue-600 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm leading-relaxed font-inter">{member.bio}</p>
-              </div>
+              </MotionWrapper>
             ))}
           </div>
         </div>
@@ -188,23 +198,25 @@ const About: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Our Community
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-inter">
-            Become part of a passionate community of sports fans. Get exclusive content, 
-            participate in discussions, and never miss the latest sports news.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-white/30"
-            />
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
-              Subscribe Now
-            </button>
-          </div>
+          <MotionWrapper animation="fadeUp">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Join Our Community
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto font-inter">
+              Become part of a passionate community of sports fans. Get exclusive content, 
+              participate in discussions, and never miss the latest sports news.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-white/30"
+              />
+              <MorphingButton variant="secondary" size="lg" className="bg-white text-blue-600 border-0">
+                Subscribe Now
+              </MorphingButton>
+            </div>
+          </MotionWrapper>
         </div>
       </section>
     </div>

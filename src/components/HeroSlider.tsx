@@ -4,6 +4,8 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Clock, Eye, ArrowRight, Play } from 'lucide-react';
 import { blogPosts } from '../data/mockData';
 import { motion } from 'framer-motion';
+import ParticleBackground from './ParticleBackground';
+import MorphingButton from './MorphingButton';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -35,6 +37,8 @@ const HeroSlider: React.FC = () => {
 
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
+      <ParticleBackground />
+      
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"
@@ -136,14 +140,14 @@ const HeroSlider: React.FC = () => {
                         variants={textVariants}
                         className="flex flex-col sm:flex-row gap-4 pt-4"
                       >
-                        <button className="group flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300 shadow-xl">
+                        <MorphingButton variant="primary" size="lg" className="group flex items-center space-x-3">
                           <span>Read Full Story</span>
                           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        <button className="group flex items-center space-x-3 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
+                        </MorphingButton>
+                        <MorphingButton variant="secondary" size="lg" className="group flex items-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/20">
                           <Play className="w-5 h-5" />
                           <span>Watch Highlights</span>
-                        </button>
+                        </MorphingButton>
                       </motion.div>
                     </motion.div>
                   </div>
@@ -156,9 +160,10 @@ const HeroSlider: React.FC = () => {
                 animate={{
                   y: [0, -20, 0],
                   rotate: [0, 180, 360],
+                  scale: [1, 1.2, 1],
                 }}
                 transition={{
-                  duration: 8,
+                  duration: 12,
                   repeat: Infinity,
                   ease: "linear"
                 }}
@@ -168,9 +173,25 @@ const HeroSlider: React.FC = () => {
                 animate={{
                   y: [0, 30, 0],
                   x: [0, 20, 0],
+                  opacity: [0.3, 0.8, 0.3],
                 }}
                 transition={{
                   duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Additional floating elements */}
+              <motion.div
+                className="absolute top-1/3 left-20 w-8 h-8 bg-green-400/20 rounded-full"
+                animate={{
+                  y: [0, -40, 0],
+                  x: [0, 30, 0],
+                  rotate: [0, 360, 0],
+                }}
+                transition={{
+                  duration: 10,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
