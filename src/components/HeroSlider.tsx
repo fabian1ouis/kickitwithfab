@@ -35,7 +35,7 @@ const HeroSlider: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
+    <section className="relative h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 pt-20">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"

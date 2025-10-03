@@ -60,7 +60,7 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 pt-32">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">

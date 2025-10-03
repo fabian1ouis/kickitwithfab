@@ -64,7 +64,7 @@ const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Image */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-96 overflow-hidden mt-20">
         <img
           src={post.image}
           alt={post.title}
