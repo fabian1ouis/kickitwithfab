@@ -6,7 +6,6 @@ import { Clock, Eye, MessageCircle, Share2, ArrowRight, Heart, Bookmark } from '
 import { blogPosts } from '../data/mockData';
 import MotionWrapper from './MotionWrapper';
 import MorphingButton from './MorphingButton';
-import LoadingSpinner from './LoadingSpinner';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -162,7 +161,7 @@ const AnimatedBlogSection: React.FC = () => {
               exit={{ opacity: 0 }}
               className="flex justify-center py-12"
             >
-              <LoadingSpinner size="lg" />
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
             </motion.div>
           )}
         </AnimatePresence>

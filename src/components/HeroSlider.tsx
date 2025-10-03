@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Clock, Eye, ArrowRight, Play } from 'lucide-react';
 import { blogPosts } from '../data/mockData';
 import { motion } from 'framer-motion';
-import ParticleBackground from './ParticleBackground';
 import MorphingButton from './MorphingButton';
 
 // Import Swiper styles
@@ -37,8 +36,6 @@ const HeroSlider: React.FC = () => {
 
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
-      <ParticleBackground />
-      
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"
