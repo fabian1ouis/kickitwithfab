@@ -74,8 +74,8 @@ const Header: React.FC = () => {
       animate="animate"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg border-b border-gray-200/20 dark:border-gray-700/20' 
-          : 'bg-transparent'
+          ? 'bg-white dark:bg-gray-900 shadow-lg border-b border-gray-200 dark:border-gray-700' 
+          : 'bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700'
       }`}
     >
       {/* Breaking News Ticker */}
