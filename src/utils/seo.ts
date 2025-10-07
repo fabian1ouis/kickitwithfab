@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   description: 'Your Ultimate Sports Destination - Latest sports news, analysis, and exclusive content',
   url: 'https://www.kickitwithfab.com',
   author: 'Fabian Louis',
-  email: 'hello@kickitwithfab.com',
+  email: 'fabianlouis99@gmail.com',
   social: {
     twitter: '@kickitwithfab',
     facebook: 'kickitwithfab',

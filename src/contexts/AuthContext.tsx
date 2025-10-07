@@ -45,10 +45,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (email: string, password: string): Promise<boolean> => {
     try {
       // Mock authentication - in production, this would call your API
-      if (email === 'admin@kickitwithfab.com' && password === 'kickitfab2025') {
+      if (email === 'fabianlouis99@gmail.com' && password === 'kickitfab2025') {
         const mockUser: AdminUser = {
           id: '1',
-          email: 'admin@kickitwithfab.com',
+          email: 'fabianlouis99@gmail.com',
           name: 'Fabian Louis',
           role: 'admin',
           createdAt: new Date().toISOString()

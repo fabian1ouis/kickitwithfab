@@ -165,8 +165,8 @@ Value: kickitwithfab.com
 ### 👨‍💻 **Author**
 - **Name**: Fabian Louis
 - **Role**: Founder & Editor-in-Chief
-- **Email**: hello@kickitwithfab.com
-- **Location**: Los Angeles, CA
+- **Email**: fabianlouis99@gmail.com
+- **Location**: Nairobi, Kenya
 
 ### 🌐 **Social Media**
 - **Twitter**: [@kickitwithfab](https://twitter.com/kickitwithfab)

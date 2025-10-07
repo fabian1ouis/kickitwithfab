@@ -29,19 +29,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@kickitwithfab.com',
+      details: 'fabianlouis99@gmail.com',
       description: 'General inquiries and feedback'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri, 9:00 AM - 6:00 PM EST'
+      details: '+254 718 112 530',
+      description: 'Mon-Fri, 9:00 AM - 6:00 PM EAT'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '456 Sports Boulevard, Los Angeles, CA 90210',
+      details: 'Nairobi, Kenya',
       description: 'Our main editorial office'
     },
     {
@@ -56,19 +56,19 @@ const Contact: React.FC = () => {
     {
       icon: MessageCircle,
       title: 'Editorial Team',
-      email: 'editorial@kickitwithfab.com',
+      email: 'fabianlouis99@gmail.com',
       description: 'Story tips, corrections, editorial inquiries'
     },
     {
       icon: Users,
       title: 'Partnerships',
-      email: 'partnerships@kickitwithfab.com',
+      email: 'fabianlouis99@gmail.com',
       description: 'Collaboration opportunities, sponsorships'
     },
     {
       icon: Globe,
       title: 'Technical Support',
-      email: 'support@kickitwithfab.com',
+      email: 'fabianlouis99@gmail.com',
       description: 'Website issues, account problems'
     }
   ];

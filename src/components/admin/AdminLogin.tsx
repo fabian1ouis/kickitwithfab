@@ -56,7 +56,7 @@ const AdminLogin: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="admin@kickitwithfab.com"
+                  placeholder="fabianlouis99@gmail.com"
                 />
               </div>
             </div>
@@ -97,7 +97,7 @@ const AdminLogin: React.FC = () => {
 
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <p className="text-sm text-gray-600 mb-2">Demo Credentials:</p>
-            <p className="text-xs text-gray-500">Email: admin@kickitwithfab.com</p>
+            <p className="text-xs text-gray-500">Email: fabianlouis99@gmail.com</p>
             <p className="text-xs text-gray-500">Password: kickitfab2025</p>
           </div>
         </div>
