@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { categories } from '../data/mockData';
-import { ArrowRight, TrendingUp, Zap, Dribbble, Trophy, Target, Globe, Brackets as Racquet } from 'lucide-react'import MorphingButton from './MorphingButton';
+import { ArrowRight, TrendingUp, Zap, Dribbble, Trophy, Target, Globe, Brackets as Racquet } from 'lucide-react';
+import MorphingButton from './MorphingButton';
 
 const AnimatedCategories: React.FC = () => {
   const categoryIcons = {
