@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { categories } from '../data/mockData';
-import { ArrowRight, TrendingUp } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Dribbble, Trophy, Target, Globe, Racquet } from 'lucide-react';
 import MotionWrapper from './MotionWrapper';
 import MorphingButton from './MorphingButton';
 
 const AnimatedCategories: React.FC = () => {
   const categoryIcons = {
-    Football: '🏈',
-    Basketball: '🏀',
-    Athletics: '🏃‍♂️',
-    Baseball: '⚾',
-    Soccer: '⚽',
-    Tennis: '🎾'
+    Football: Zap,
+    Basketball: Dribbble,
+    Athletics: Trophy,
+    Baseball: Target,
+    Soccer: Globe,
+    Tennis: Racquet
   };
 
   const containerVariants = {
@@ -65,11 +65,11 @@ const AnimatedCategories: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden dark:from-gray-900 dark:to-gray-800">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4">
         <MotionWrapper animation="fadeUp" className="text-center mb-16">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold font-fraunces text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold font-fraunces text-gray-900 dark:text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -78,7 +78,7 @@ const AnimatedCategories: React.FC = () => {
             Explore Sports Categories
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto font-inter"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-inter"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -119,9 +119,10 @@ const AnimatedCategories: React.FC = () => {
                     ease: "easeInOut"
                   }}
                 >
-                  <div className="text-8xl">
-                    {categoryIcons[category.name as keyof typeof categoryIcons] || '🏆'}
-                  </div>
+                  {React.createElement(categoryIcons[category.name as keyof typeof categoryIcons] || Trophy, {
+                    size: 128,
+                    className: "w-32 h-32"
+                  })}
                 </motion.div>
 
                 {/* Floating Particles */}
@@ -155,9 +156,12 @@ const AnimatedCategories: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <motion.div 
                       variants={iconVariants}
-                      className="text-5xl mb-2"
+                      className="mb-2"
                     >
-                      {categoryIcons[category.name as keyof typeof categoryIcons] || '🏆'}
+                      {React.createElement(categoryIcons[category.name as keyof typeof categoryIcons] || Trophy, {
+                        size: 48,
+                        className: "w-12 h-12"
+                      })}
                     </motion.div>
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 45 }}
@@ -213,7 +217,7 @@ const AnimatedCategories: React.FC = () => {
 
         {/* CTA Section */}
         <MotionWrapper animation="scale" delay={0.5} className="text-center mt-16">
-          <MorphingButton variant="primary" size="lg">
+          <MorphingButton variant="primary" size="lg" className="shadow-xl">
             View All Categories
           </MorphingButton>
         </MotionWrapper>

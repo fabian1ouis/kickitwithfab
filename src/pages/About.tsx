@@ -1,10 +1,17 @@
 import React from 'react';
-import { Users, Award, Clock, Target, Heart, Globe } from 'lucide-react';
+import { Users, Award, Clock, Target, Heart, Globe, Zap, Dribbble, Trophy, Racquet } from 'lucide-react';
 import MotionWrapper from '../components/MotionWrapper';
 import AnimatedCounter from '../components/AnimatedCounter';
 import MorphingButton from '../components/MorphingButton';
 
 const About: React.FC = () => {
+  const categoryIcons = {
+    Football: Zap,
+    Basketball: Dribbble,
+    Athletics: Trophy,
+    Tennis: Racquet
+  };
+
   const stats = [
     { icon: Users, value: '50K+', label: 'Daily Readers' },
     { icon: Award, value: '500+', label: 'Articles Published' },
@@ -58,9 +65,9 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 pt-32">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 dark:from-gray-800 dark:via-gray-900 dark:to-black text-white py-20 pt-32">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -74,22 +81,22 @@ const About: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <MotionWrapper animation="fadeUp">
             <div className="grid md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <MotionWrapper key={index} animation="scale" delay={index * 0.2} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors">
+                <div className="w-20 h-20 mx-auto mb-4 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center group-hover:bg-blue-700 dark:group-hover:bg-blue-400 transition-colors">
                   <stat.icon className="w-10 h-10 text-white" />
                 </div>
-                <div className="text-gray-900 mb-2">
+                <div className="text-gray-900 dark:text-white mb-2">
                   <AnimatedCounter 
                     end={parseInt(stat.value.replace(/[^\d]/g, '')) || 50} 
                     suffix={stat.value.includes('K') ? 'K+' : stat.value.includes('/') ? '/7' : '+'}
                   />
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 dark:text-gray-300 font-medium">{stat.label}</div>
               </MotionWrapper>
             ))}
             </div>
@@ -102,10 +109,10 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <MotionWrapper animation="fadeLeft">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Our Story
               </h2>
-              <div className="prose prose-lg text-gray-600 font-inter">
+              <div className="prose prose-lg text-gray-600 dark:text-gray-300 font-inter">
                 <p className="mb-6 leading-relaxed">
                   Founded in 2018 by a team of passionate sports enthusiasts, Kick it with Fab began as a simple blog 
                   dedicated to providing authentic, insightful sports coverage. What started as a weekend project 
@@ -137,25 +144,25 @@ const About: React.FC = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <MotionWrapper animation="fadeUp" className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-inter">
               These core principles guide everything we do and shape how we serve our community of sports fans.
             </p>
           </MotionWrapper>
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <MotionWrapper key={index} animation="fadeUp" delay={index * 0.2} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <value.icon className="w-8 h-8 text-blue-600" />
+              <MotionWrapper key={index} animation="fadeUp" delay={index * 0.2} className="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                  <value.icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed font-inter">{value.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{value.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-inter">{value.description}</p>
               </MotionWrapper>
             ))}
           </div>
@@ -166,10 +173,10 @@ const About: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <MotionWrapper animation="fadeUp" className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-inter">
               Our diverse team of experienced journalists, former athletes, and sports analysts brings unique 
               perspectives to every story we tell.
             </p>
@@ -186,9 +193,9 @@ const About: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>
                 <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed font-inter">{member.bio}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-inter">{member.bio}</p>
               </MotionWrapper>
             ))}
           </div>
