@@ -1,6 +1,6 @@
 import React from 'react';
 import { categories } from '../data/mockData';
-import { ArrowRight, Zap, Dribbble, Trophy, Target, Globe, Racquet } from 'lucide-react';
+import { ArrowRight, Zap, Dribbble, Trophy, Target, Globe, Brackets as Racquet } from 'lucide-react';
 
 const Categories: React.FC = () => {
   const categoryIcons = {

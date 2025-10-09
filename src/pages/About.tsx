@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Award, Clock, Target, Heart, Globe, Zap, Dribbble, Trophy, Racquet } from 'lucide-react';
+import { Users, Award, Clock, Target, Heart, Globe, Zap, Dribbble, Trophy, Brackets as Racquet } from 'lucide-react';
 import MotionWrapper from '../components/MotionWrapper';
 import AnimatedCounter from '../components/AnimatedCounter';
 import MorphingButton from '../components/MorphingButton';
