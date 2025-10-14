@@ -150,7 +150,7 @@ Value: kickitwithfab.com
 
 ### Current Hosting
 - **Platform**: Bolt Hosting
-- **URL**: https://modern-sports-blog-w-5flc.bolt.host
+- **URL**: https://kickitwithfab.bolt.host
 - **Status**: Live and optimized
 
 ### Custom Domain Migration
